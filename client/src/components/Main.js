@@ -12,9 +12,7 @@ const Main = () => {
     <Container fluid>
       <Row className="d-flex justify-content-center align-items-center text-center">
         <Col md={12} className="d-flex justify-content-center align-items-center text">
-          <p className="d-flex justify-content-center align-items-center text-center">
-            FREE SHIPPING ON ALL U.S. ORDERS $49+
-          </p>
+          <p style={{ padding: "0.5rem" }}>FREE SHIPPING ON ALL U.S. ORDERS $49+</p>
         </Col>
       </Row>
       <div className="homep">
