@@ -54,7 +54,7 @@ const Main = () => {
         </Row>
         <Row
           className="d-flex justify-content-center align-items-center text-center"
-          style={{ height: "95vh" }}>
+          style={{ height: "80vh" }}>
           <Col md={6} className=" ">
             <h1>BREW ANYWHERE. BE ANYWHERE.</h1>
             <h4>
@@ -63,6 +63,11 @@ const Main = () => {
               accusam et justo duo.
             </h4>
             <Button>POUR ON THE GO</Button>
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center align-items-end text-center">
+          <Col md={3}>
+            <h4>explore</h4>
           </Col>
         </Row>
       </div>
