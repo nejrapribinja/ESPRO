@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
+import { Nav, NavLink, Col, Row, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import two from "../images/2.png";
 import three from "../images/3.png";
 import four from "../images/4.png";
@@ -16,7 +16,7 @@ const Main = () => {
         </Col>
       </Row>
       <div className="homep">
-        <Row className="nv ">
+        {/* <Row className="nv ">
           <Col md={4} className="d-flex ">
             <h5>Shop</h5>
             <h5>Our story</h5>
@@ -31,28 +31,34 @@ const Main = () => {
             <HiOutlineUser className="icon" />
             <BsBag className="icon" />
           </Col>
-          {/* <Navbar collapseOnSelect expand="lg">
-           <Navbar.Brand href="#pocetnaStrana">
-                <img src={logo} style={{ width: "100px" }} />
-              </Navbar.Brand> 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#oNama">Shop</Nav.Link>
-
-              <Nav.Link href="#galerija">Our story</Nav.Link>
-            </Nav>
-            <h2>espro</h2>
-            <Nav>
-              <Nav.Link href="#kontakt">Brew guides</Nav.Link>
-              <Nav.Link href="/login">Blog</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar> */}
-        </Row>
+        </Row> */}
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+          <Container>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Col className="d-flex">
+                <Nav>
+                  <Nav.Link href="#galerija">Shop</Nav.Link>
+                  <Nav.Link href="#galerija">Our story</Nav.Link>
+                </Nav>
+              </Col>
+              <Col className="text-center">
+                <Navbar.Brand href="#pocetnaStrana">ESPRO</Navbar.Brand>
+              </Col>
+              <Col>
+                <Nav className="d-flex justify-content-end align-items-center text-end">
+                  <Nav.Link href="#kontakt">Brew guides</Nav.Link>
+                  <Nav.Link href="/login">Blog</Nav.Link> <IoIosSearch className="icon" />
+                  <HiOutlineUser className="icon" />
+                  <BsBag className="icon" />
+                </Nav>
+              </Col>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
         <Row
           className="d-flex justify-content-center align-items-center text-center"
-          style={{ height: "80vh" }}>
+          style={{ height: "77vh" }}>
           <Col md={6} className=" ">
             <h1>BREW ANYWHERE. BE ANYWHERE.</h1>
             <h4>
