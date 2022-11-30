@@ -25,7 +25,9 @@ const Main = () => {
                 </Nav>
               </Col>
               <Col className="text-center">
-                <Navbar.Brand href="#pocetnaStrana">
+                <Navbar.Brand
+                  href="#pocetnaStrana"
+                  className="d-flex justify-content-center align-items-center">
                   <img src={logo} />
                 </Navbar.Brand>
               </Col>
@@ -52,7 +54,7 @@ const Main = () => {
               <br /> labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
               et justo duo.
             </p>
-            <Button>POUR ON THE GO</Button>
+            <Button className="btn1">Pour on the go</Button>
           </Col>
         </Row>
         <Row className="d-flex justify-content-center align-items-center text-center">

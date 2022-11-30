@@ -61,7 +61,7 @@ h1, h4 {
   margin-bottom: 0rem !important;
 }
 
-button {
+.btn1 {
   background: #FFFFFF 0% 0% no-repeat padding-box !important;
   border-radius: 26px !important;
   color: #221F20 !important;
@@ -80,7 +80,7 @@ button {
 }
 
 .footer {
-  background-color: #8DB9CA;
+  background-color: #659AB1;
   color: #FFFFFF;
 }
 
@@ -88,6 +88,10 @@ hr {
   color: #8DB9CA;
   border-bottom: 3px dashed #FFFFFF;
   
+}
+
+.navbar-brand {
+  margin-right: 0rem !important;
 }
 
 .nav-link {
@@ -115,6 +119,46 @@ hr {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 2.1px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.t3 {
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.t4 {
+  color:#EFF5F7;
+  font-size: 18px;
+}
+
+.form-control {
+  background-color: #84AEC1;
+  padding: 1rem;
+  border: none;
+}
+
+.btn2 {
+  background-color: #84AEC1;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-size: 12px;
+}
+
+.form-control::placeholder {
+  color: #EFF5F7;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.7px;
   color: #FFFFFF;
   text-transform: uppercase;
 }
