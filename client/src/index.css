@@ -32,7 +32,7 @@ code {
   background-image: url('./images/1.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 94vh;
+  height: 95vh;
 }
 
 .container-fluid {
@@ -63,13 +63,15 @@ h1, h4 {
 
 button {
   background: #FFFFFF 0% 0% no-repeat padding-box !important;
-  border-radius: 26px;
-  color: black !important;
-  font: normal normal bold 12px/14px Josefin Sans;
-letter-spacing: 1.8px;
-color: #221F20;
-text-transform: uppercase;
-opacity: 1;
+  border-radius: 26px !important;
+  color: #221F20 !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  opacity: 1;
+  --bs-btn-padding-x: 2rem !important;
+  --bs-btn-padding-y: 0.7rem !important;
 }
 
 .icon {
@@ -86,4 +88,33 @@ hr {
   color: #8DB9CA;
   border-bottom: 3px dashed #FFFFFF;
   
+}
+
+.nav-link {
+  font-weight: bold;
+  letter-spacing: 1.95px !important;
+  color: #221F20 !important;
+  text-transform: uppercase !important;
+}
+
+.hd1 {
+  font-weight: bold;
+  font-size: 50px ;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.t1 {
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 1rem;
+}
+
+.t2 {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2.1px;
+  color: #FFFFFF;
+  text-transform: uppercase;
 }
