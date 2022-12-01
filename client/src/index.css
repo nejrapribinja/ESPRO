@@ -46,8 +46,6 @@ code {
   background-color: #FFFFFF;
 }
 
-
-
 p {
   margin-bottom: 0rem !important;
 }
@@ -70,9 +68,12 @@ h1, h4 {
   letter-spacing: 1.8px;
   text-transform: uppercase;
   opacity: 1;
-  --bs-btn-padding-x: 2rem !important;
-  --bs-btn-padding-y: 0.7rem !important;
   border: 1px solid #221F20;
+}
+
+button {
+  --bs-btn-padding-x: 1.5rem !important;
+  --bs-btn-padding-y: 0.7rem !important;
 }
 
 .icon {
@@ -232,4 +233,55 @@ button:hover {
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.t9 {
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #221F20;
+  text-transform: uppercase;
+}
+
+.t10 {
+  color: #221F20;
+  margin: 3rem !important;
+  font-size: 22px;
+}
+
+.t11 {
+  font-weight: bold;
+  font-size: 105px;
+  letter-spacing: 2.63px;
+  color: #D8E6EB;
+  text-transform: uppercase;
+}
+
+.s6 {
+  background-image: url('./images/9.png');
+  height: 726px;
+}
+
+.btn4 {
+  border: 1px solid #FFFFFF;
+  border-radius: 26px;
+  letter-spacing: 1.8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.t12 {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
+}
+
+.t13 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
 }

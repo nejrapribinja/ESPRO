@@ -4,7 +4,7 @@ import eight from "../images/8.png";
 
 const Section4 = () => {
   return (
-    <Container fluid style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
+    <Container fluid style={{}}>
       <Row className="d-flex justify-content-center align-items-center text-center">
         <Col md={6} className="d-flex justify-content-center align-items-center sc4-left">
           <div>

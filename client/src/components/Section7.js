@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
 import Product from "./Product";
 
-const Section1 = () => {
+const Section7 = () => {
   return (
-    <Container fluid style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
+    <Container fluid style={{ paddingTop: "4rem", paddingBottom: "4rem" }} className="section7">
       <Row className="d-flex justify-content-center align-items-center text-center">
-        <Col md={4}>
-          <p className="t5">Pour your best cup with</p>
-          <p className="t6">our best sellers</p>
+        <Col md={5}>
+          <p className="t6">Explore our products</p>
         </Col>
       </Row>
       <Row className="d-flex justify-content-center align-items-center text-center">
@@ -16,11 +15,15 @@ const Section1 = () => {
           <Product />
           <Product />
           <Product />
-          <Product />
+        </Col>
+      </Row>
+      <Row className="d-flex justify-content-center align-items-center text-center">
+        <Col md={5}>
+          <Button className="btn1">Shop all products</Button>
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default Section1;
+export default Section7;

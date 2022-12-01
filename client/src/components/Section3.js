@@ -4,7 +4,7 @@ import Product from "./Product";
 
 const Section3 = () => {
   return (
-    <Container fluid style={{ paddingTop: "3rem", paddingBottom: "3rem" }} className="section3">
+    <Container fluid style={{ paddingTop: "4rem", paddingBottom: "4rem" }} className="section3">
       <Row className="d-flex justify-content-center align-items-center text-center">
         <Col md={5}>
           <p className="t6">Explore our products</p>

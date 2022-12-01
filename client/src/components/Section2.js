@@ -4,7 +4,7 @@ import five from "../images/5.png";
 
 const Section2 = () => {
   return (
-    <Container fluid style={{ paddingTop: "3rem", paddingBottom: "3rem" }} className="section2">
+    <Container fluid style={{ paddingTop: "4rem", paddingBottom: "4rem" }} className="section2">
       <Row className="d-flex justify-content-center align-items-center text-center">
         <Col md={4}>
           <p className="t5">Designed for real life</p>
