@@ -192,5 +192,44 @@ h6 {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 0.72px;
-color: #221F20;
+  color: #221F20;
+}
+
+.btn3 {
+  background-color: transparent;
+  letter-spacing: 1.8px;
+  color: #221F20;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #221F20;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: #659AB1 !important;
+}
+
+.sc4-left {
+  background-image: url('./images/6.png');
+  background-position-x: 50%;
+  background-position-y: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.sc4-right {
+  background-color: #8DB9CA;
+  height: 700px;
+}
+
+.t8 {
+  font-size: 74px;
+  font-weight: bold;
+  letter-spacing: 2.1px;
+  color: #AACBD8;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
