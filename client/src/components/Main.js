@@ -4,8 +4,11 @@ import { BsBag } from "react-icons/bs";
 import { BiUser, BiSearch } from "react-icons/bi";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import logo from "../images/ESPRO Logo.png";
+import Login from "./Login";
 
 const Main = () => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <Container fluid>
       <Row className="d-flex justify-content-center align-items-center text-center">
@@ -36,12 +39,13 @@ const Main = () => {
                   <Nav.Link href="#kontakt">Brew guides</Nav.Link>
                   <Nav.Link href="/login">Blog</Nav.Link>
                   <BiSearch className="icon" />
-                  <BiUser className="icon" />
+                  <BiUser className="icon" onClick={() => setModalShow(true)} />
                   <BsBag className="icon" />
                 </Nav>
               </Col>
             </Navbar.Collapse>
           </Container>
+          <Login show={modalShow} onHide={() => setModalShow(false)} />
         </Navbar>
         <Row
           className="d-flex justify-content-center align-items-center text-center"
@@ -58,8 +62,8 @@ const Main = () => {
           </Col>
         </Row>
         <Row className="d-flex justify-content-center align-items-center text-center">
-          <Col md={3} className="d-flex justify-content-center align-items-center">
-            <p className="t2">explore</p>
+          <Col md={3} className="d-flex justify-content-center align-items-center t2">
+            <p>explore</p>
             <AiOutlineArrowDown style={{ color: "white", fontSize: "18px" }} />
           </Col>
         </Row>

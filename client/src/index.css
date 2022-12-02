@@ -79,6 +79,7 @@ button {
 .icon {
   font-size: 1rem !important;
   margin:0.5rem;
+  cursor: pointer;
 }
 
 .footer {
@@ -123,6 +124,15 @@ hr {
   letter-spacing: 2.1px;
   color: #FFFFFF;
   text-transform: uppercase;
+  animation: waviy 1s infinite;
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
 }
 
 .t3 {
@@ -323,4 +333,9 @@ button:hover {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color:#659AB1;
 }
