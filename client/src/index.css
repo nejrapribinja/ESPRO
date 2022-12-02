@@ -285,3 +285,42 @@ button:hover {
   letter-spacing: 1.2px;
   color: #FFFFFF;
 }
+
+.sc7 {
+  background-color:#84AEC1;
+  height: 500px;
+}
+
+.t14 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #221F20;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem !important;
+}
+
+.sc31 {
+  background-image: url('./images/11.png');
+  height: 515px;
+}
+
+.sc32 {
+  background-image: url('./images/12.png');
+  height: 515px;
+  background-position: center;
+}
+
+.sc33 {
+  background-image: url('./images/13.png');
+  height: 515px;
+  background-position-x: 40%;
+}
+
+.t15 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 2rem;
+}
