@@ -58,3 +58,21 @@ exports.logOut = (req, res, next) => {
   res.clearCookie("access_token");
   res.redirect("/");
 };
+
+exports.getPosts = async (req, res) => {
+  try {
+    await pool.query(
+      `SELECT *, to_char(p.date_post, 'DD/MM/YYYY') as dat from post p inner join users u on p.author = u.id`,
+      [],
+      (err, result) => {
+        if (err) {
+          console.info(err);
+        }
+        res.json(result.rows);
+        console.log(result.rows);
+      }
+    );
+  } catch (err) {
+    console.log(err);
+  }
+};
