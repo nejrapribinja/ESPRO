@@ -4,7 +4,7 @@ import Post from "./Post";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 
-const PostSection = () => {
+const PostUserSection = () => {
   const [posts, setPosts] = useState([]);
   const [auth, setAuth] = useState(localStorage.getItem("isAuth"));
   const [modalShow, setModalShow] = useState(false);
@@ -54,4 +54,4 @@ const PostSection = () => {
   );
 };
 
-export default PostSection;
+export default PostUserSection;
