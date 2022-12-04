@@ -34,11 +34,13 @@ const PostSection = () => {
         </Col>
       </Row>
       <Row className="d-flex justify-content-center align-items-center text-center">
-        <Col md={6} className="d-flex justify-content-center align-items-center text-center">
-          {posts.map((post) => {
-            return <Post post={post} />;
-          })}
-        </Col>
+        {posts.map((post) => {
+          return (
+            <Col md={6} className="d-flex justify-content-center align-items-center text-center">
+              <Post post={post} />
+            </Col>
+          );
+        })}
       </Row>
       <Row className="d-flex justify-content-center align-items-center text-center ">
         <Col md={4}>

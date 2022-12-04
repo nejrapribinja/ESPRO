@@ -1,4 +1,5 @@
 import { Button, Card, Col } from "react-bootstrap";
+import { BiCommentDetail } from "react-icons/bi";
 
 const Post = (props) => {
   return (
@@ -10,7 +11,7 @@ const Post = (props) => {
       <Card.Footer className="d-flex text-muted">
         <Col className="text-start">{props.post.dat}</Col>
         <Col className="text-end">
-          Author: {props.post.first_name} {props.post.last_name}
+          {props.post.first_name} {props.post.last_name} | <BiCommentDetail /> 3
         </Col>
       </Card.Footer>
     </Card>

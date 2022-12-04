@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import { Route, Routes, Navigate } from "react-router-dom";
 import PrivateRoutes from "./components/utils/PrivateRoutes";
-import PostUserSection from "./components/PostUserSection";
+import PostUserSection from "./components/userPrivate/PostUserSection";
 
 function App() {
   return (
