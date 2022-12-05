@@ -3,6 +3,7 @@ import { Col, Row, Container, Table, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../Navbar";
 import EditPost from "./EditPost";
+import { BsFileEarmarkText } from "react-icons/bs";
 
 const MyPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -12,7 +13,7 @@ const MyPosts = () => {
 
   useEffect(() => {
     getUserPost();
-  }, []);
+  }, [posts]);
 
   const getUserPost = async () => {
     try {
@@ -26,11 +27,31 @@ const MyPosts = () => {
     }
   };
 
+  const deletePost = async (id) => {
+    try {
+      await fetch(`/user/deletePost/${id}`, {
+        method: "DELETE",
+      });
+
+      setPosts(posts.filter((post) => post.id !== id));
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   return (
     <>
       <Navigation />
       <Container fluid className="postuser">
-        <Row className="d-flex justify-content-center align-items-center text-center pt-5">
+        <Row className="d-flex justify-content-end align-items-center text-center pt-5">
+          <Col md={4} className="d-flex justify-content-center">
+            <BsFileEarmarkText
+              style={{ fontSize: "2rem", marginRight: "3rem", cursor: "pointer" }}
+              onClick={() => navigate("/allPosts")}
+            />
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center align-items-center text-center mt-5">
           <Col md={9} className="d-flex justify-content-center align-items-center text-center">
             <Table>
               <thead>
@@ -58,7 +79,7 @@ const MyPosts = () => {
                         <EditPost post={post} show={modalShow} onHide={() => setModalShow(false)} />
                       </td>
                       <td>
-                        <Button className="btn2" onClick={() => setModalShow(true)}>
+                        <Button className="btn2" onClick={() => deletePost(post.id)}>
                           Delete
                         </Button>
                       </td>

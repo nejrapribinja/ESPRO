@@ -48,13 +48,11 @@ const AllPosts = () => {
           </Col>
         </Row>
         <Row className="d-flex justify-content-center align-items-center text-center mt-5">
-          {posts.map((post) => {
-            return (
-              <Col md={6} className="d-flex justify-content-center align-items-center text-center">
-                <Post post={post} />
-              </Col>
-            );
-          })}
+          <Col md={12} className="d-flex justify-content-center align-items-center text-center">
+            {posts.map((post) => {
+              return <Post post={post} />;
+            })}
+          </Col>
         </Row>
       </Container>
     </>

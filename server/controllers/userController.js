@@ -59,3 +59,13 @@ exports.editPost = async (req, res) => {
     console.log(err);
   }
 };
+
+exports.deletePost = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await pool.query("DELETE FROM post WHERE id = $1", [id]);
+    res.status(200);
+  } catch (err) {
+    console.log(err.message);
+  }
+};

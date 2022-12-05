@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
 import { GiCoffeeCup } from "react-icons/gi";
 import { BsInstagram } from "react-icons/bs";
+import one from "../images/14.png";
+import two from "../images/15.png";
+import three from "../images/16.png";
+import four from "../images/17.png";
+import five from "../images/18.png";
 
 const Section8 = () => {
   return (
@@ -22,6 +27,23 @@ const Section8 = () => {
           </Col>
         </Row>
       </Container>
+      <Row className="d-flex justify-content-center align-items-center text-center mt-4">
+        <Col>
+          <img src={one} />
+        </Col>
+        <Col>
+          <img src={two} />
+        </Col>
+        <Col>
+          <img src={three} />
+        </Col>
+        <Col>
+          <img src={four} />
+        </Col>
+        <Col>
+          <img src={five} />
+        </Col>
+      </Row>
     </Container>
   );
 };
