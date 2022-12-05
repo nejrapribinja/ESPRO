@@ -46,7 +46,7 @@ const PostSection = () => {
         <Col md={4}>
           <Button
             className="btn4 mt-5"
-            onClick={auth ? () => navigate("/posts") : () => setModalShow(true)}>
+            onClick={auth ? () => navigate("/allPosts") : () => setModalShow(true)}>
             View more
           </Button>
           <Login show={modalShow} onHide={() => setModalShow(false)} />

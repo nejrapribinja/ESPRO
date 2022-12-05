@@ -11,7 +11,7 @@ const authorization = require("./middleware/authorization");
 app.set("views", path.join(__dirname, "views"));
 
 var indexRouter = require("./routes/index");
-var customerRouter = require("./routes/customer");
+var userRouter = require("./routes/user");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/customer", authorization, customerRouter.router);
+app.use("/user", authorization, userRouter.router);
 app.use("/", indexRouter.router);
 
 app.listen(5000, () => {

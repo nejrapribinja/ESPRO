@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Container, Button, Nav } from "react-bootstrap";
+import { Col, Row, Container, Button, Nav, Navbar } from "react-bootstrap";
 import Post from "../Post";
 import Login from "../Login";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../Navbar";
+import Navigation2 from "./Navbar";
 
-const PostUserSection = () => {
+const AllPosts = () => {
   const [posts, setPosts] = useState([]);
   const [auth, setAuth] = useState(localStorage.getItem("isAuth"));
   const [modalShow, setModalShow] = useState(false);
@@ -31,12 +32,19 @@ const PostUserSection = () => {
     <>
       <Navigation />
       <Container fluid className="postuser">
-        <Nav justify variant="tabs" defaultActiveKey="/home">
+        <Nav justify variant="tabs" defaultActiveKey="/allPosts">
           <Nav.Item>
-            <Nav.Link href="/home">All posts</Nav.Link>
+            <Nav.Link href="/allPosts">All posts</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1">Edit posts</Nav.Link>
+            <Nav.Link eventKey="link-1" href="/addPost">
+              Add post
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="link-2" href="/editPost">
+              Edit post
+            </Nav.Link>
           </Nav.Item>
         </Nav>
         <Row className="d-flex justify-content-center align-items-center text-center ">
@@ -47,18 +55,14 @@ const PostUserSection = () => {
         <Row className="d-flex justify-content-center align-items-center text-center">
           <Col md={6} className="d-flex justify-content-center align-items-center text-center">
             {posts.map((post) => {
-              return <Post post={post} />;
+              return (
+                <Col
+                  md={6}
+                  className="d-flex justify-content-center align-items-center text-center">
+                  <Post post={post} />
+                </Col>
+              );
             })}
-          </Col>
-        </Row>
-        <Row className="d-flex justify-content-center align-items-center text-center ">
-          <Col md={4}>
-            <Button
-              className="btn4 mt-5"
-              onClick={auth ? () => navigate("/posts") : () => setModalShow(true)}>
-              View more
-            </Button>
-            <Login show={modalShow} onHide={() => setModalShow(false)} />
           </Col>
         </Row>
       </Container>
@@ -66,4 +70,4 @@ const PostUserSection = () => {
   );
 };
 
-export default PostUserSection;
+export default AllPosts;

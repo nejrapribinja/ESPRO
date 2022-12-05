@@ -1,7 +1,5 @@
 const roles = {
-  admin: 0,
-  customer: 1,
-  seller: 2,
+  user: 0,
 };
 
 module.exports = roles;
