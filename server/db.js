@@ -9,9 +9,9 @@ const pool = new Pool({
   database: process.env.database,
   password: process.env.password,
   port: process.env.dbport,
-  max: 3, // set pool max size to 10
-  idleTimeoutMillis: 1000, // close idle clients after 1 second
-  connectionTimeoutMillis: 1000,
+  max: 100,
+  idleTimeoutMillis: 30000, // close idle clients after 1 second
+  connectionTimeoutMillis: 30000,
 });
 
 module.exports = { pool };

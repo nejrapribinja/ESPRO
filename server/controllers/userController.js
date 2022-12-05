@@ -2,12 +2,12 @@ const { pool } = require("../db");
 
 exports.addPost = async (req, res) => {
   try {
-    const { ime, prezime, email, broj, datum, kategorija } = req.body;
-    console.log(kategorija);
+    const { title, description, date, author } = req.body;
+    console.log(title, description, date, author);
     await pool.query(
-      `insert into termini (ime, prezime, email, broj, datum, kategorija_id) 
-                    values ($1, $2, $3, $4, $5, $6)`,
-      [ime, prezime, email, broj, datum, kategorija],
+      `insert into post (title, date_post, description, author) 
+                    values ($1, $2, $3, $4)`,
+      [title, date, description, author],
       (err, result) => {
         if (err) {
           console.info(err);

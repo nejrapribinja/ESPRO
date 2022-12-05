@@ -148,7 +148,7 @@ hr {
   font-size: 18px;
 }
 
-.form-control {
+ .inp {
   background-color: #84AEC1;
   padding: 1rem;
   border: none;
@@ -163,7 +163,7 @@ hr {
   font-size: 12px;
 }
 
-.form-control::placeholder {
+.inp::placeholder {
   color: #EFF5F7;
 }
 

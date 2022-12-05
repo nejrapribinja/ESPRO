@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row, Container, Button, Form, Nav } from "react-bootstrap";
-import Post from "../Post";
-import Login from "../Login";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../Navbar";
-import Navigation2 from "./Navbar";
 
 const EditPost = () => {
   const [posts, setPosts] = useState([]);
@@ -56,7 +53,7 @@ const EditPost = () => {
           <Col md={6} className="d-flex justify-content-center align-items-center text-center">
             <Form>
               <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Group as={Col} className="mb-3">
                   <Form.Label>Email</Form.Label>
                   <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>

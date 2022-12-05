@@ -20,7 +20,7 @@ const Footer = () => {
           <Col md={7} className="text-end">
             <Form className="d-flex">
               <InputGroup>
-                <Form.Control placeholder="Enter your email address" />
+                <Form.Control placeholder="Enter your email address" className="inp" />
                 <Button className="d-flex align-items-center btn2">Sign up</Button>
               </InputGroup>
             </Form>

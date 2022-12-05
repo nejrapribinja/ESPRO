@@ -1,115 +1,79 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Container, Button, Form, Nav } from "react-bootstrap";
-import Post from "../Post";
-import Login from "../Login";
+import { Button, Form, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import Navigation from "../Navbar";
-import Navigation2 from "./Navbar";
 
-const AddPost = () => {
-  const [posts, setPosts] = useState([]);
+function AddPost(props) {
   const [auth, setAuth] = useState(localStorage.getItem("isAuth"));
-  const [modalShow, setModalShow] = useState(false);
   const navigate = useNavigate();
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [author, setAuthor] = useState(localStorage.getItem("id"));
 
-  useEffect(() => {
-    getPost();
-  }, []);
-
-  const getPost = async () => {
+  const add = async (e) => {
+    e.preventDefault();
     try {
-      const response = await fetch("/getPosts");
-      const jsonData = await response.json();
-
-      setPosts(jsonData);
-      console.log(jsonData);
+      await fetch("/user/addPost", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title, description, date, author }),
+      });
+      window.location.reload();
     } catch (err) {
-      console.log(err);
+      console.error(err.message);
     }
   };
 
   return (
-    <>
-      <Navigation />
-      <Container fluid className="postuser">
-        <Nav justify variant="tabs" defaultActiveKey="link-1">
-          <Nav.Item>
-            <Nav.Link href="/allPosts">All posts</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-1" href="/addPost">
-              Add post
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2" href="/editPost">
-              Edit post
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-        <Row className="d-flex justify-content-center align-items-center text-center ">
-          <Col md={4}>
-            <p className="t3">Add post</p>
-          </Col>
-        </Row>
-        <Row className="d-flex justify-content-center align-items-center text-center">
-          <Col md={6} className="d-flex justify-content-center align-items-center text-center">
-            <Form>
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
+    <Modal {...props} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal.Body className="text-center">Add post</Modal.Body>
 
-                <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-              </Row>
+      <Modal.Footer>
+        <Form style={{ width: "35rem" }} onSubmit={add} className="text-center">
+          <Form.Group className="mb-4">
+            <Form.Label>Title</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter title"
+              name="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formGridAddress1">
-                <Form.Label>Address</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
-              </Form.Group>
+          <Form.Group className="mb-4">
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Description"
+              name="description"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formGridAddress2">
-                <Form.Label>Address 2</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
-              </Form.Group>
+          <Form.Group className="mb-4">
+            <Form.Label>Date</Form.Label>
+            <Form.Control
+              type="date"
+              name="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridCity">
-                  <Form.Label>City</Form.Label>
-                  <Form.Control />
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridState">
-                  <Form.Label>State</Form.Label>
-                  <Form.Select defaultValue="Choose...">
-                    <option>Choose...</option>
-                    <option>...</option>
-                  </Form.Select>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridZip">
-                  <Form.Label>Zip</Form.Label>
-                  <Form.Control />
-                </Form.Group>
-              </Row>
-
-              <Form.Group className="mb-3" id="formGridCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </>
+          <Button className="btn1" type="submit">
+            Add post
+          </Button>
+        </Form>
+      </Modal.Footer>
+    </Modal>
   );
-};
+}
 
 export default AddPost;
