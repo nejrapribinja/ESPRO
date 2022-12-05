@@ -39,7 +39,10 @@ const AllPosts = () => {
               style={{ fontSize: "2rem", marginRight: "3rem", cursor: "pointer" }}
               onClick={() => setModalShow(true)}
             />
-            <BiEdit style={{ fontSize: "2rem", cursor: "pointer" }} />
+            <BiEdit
+              style={{ fontSize: "2rem", cursor: "pointer" }}
+              onClick={() => navigate("/editPost")}
+            />
 
             <AddPost show={modalShow} onHide={() => setModalShow(false)} />
           </Col>

@@ -2,8 +2,7 @@ import Home from "./components/Home";
 import { Route, Routes, Navigate } from "react-router-dom";
 import PrivateRoutes from "./components/utils/PrivateRoutes";
 import AllPosts from "./components/userPrivate/AllPosts";
-import AddPost from "./components/userPrivate/AddPost";
-import EditPost from "./components/userPrivate/EditPost";
+import MyPosts from "./components/userPrivate/MyPosts";
 
 function App() {
   return (
@@ -12,8 +11,7 @@ function App() {
 
       <Route element={<PrivateRoutes />}>
         <Route path="/allPosts" element={<AllPosts />} />
-        <Route path="/addPost" element={<AddPost />} />
-        <Route path="/editPost" element={<EditPost />} />
+        <Route path="/editPost" element={<MyPosts />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" />} />

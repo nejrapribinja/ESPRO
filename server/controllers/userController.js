@@ -20,30 +20,41 @@ exports.addPost = async (req, res) => {
   }
 };
 
-exports.getKategorije = (req, res) => {
+exports.getUserPosts = async (req, res) => {
+  const id_user = req.user.token_id;
   try {
-    pool.query(`select * from kategorija`, (err, result) => {
-      if (err) {
-        console.info(err);
+    await pool.query(
+      `SELECT p.*, to_char(p.date_post, 'yyyy-mm-dd') as dat, u.first_name, u.last_name from post p 
+          inner join users u on p.author = u.id 
+          WHERE p.author = $1`,
+      [id_user],
+      (err, result) => {
+        if (err) {
+          console.info(err);
+        }
+        res.json(result.rows);
+        console.log(result.rows);
       }
-      res.json(result.rows);
-      //console.log(result.rows);
-    });
+    );
   } catch (err) {
     console.log(err);
   }
 };
 
-exports.getSlike = (req, res) => {
-  const { id } = req.params;
+exports.editPost = async (req, res) => {
   try {
-    pool.query(`SELECT * FROM fotografija WHERE kategorija_id = $1`, [id], (err, result) => {
-      if (err) {
-        console.info(err);
+    const { title, description, date, postID } = req.body;
+    console.log(title, description, date, postID);
+    await pool.query(
+      `UPDATE post set title=$1, date_post=$2, description=$3 WHERE id=$4`,
+      [title, date, description, postID],
+      (err, result) => {
+        if (err) {
+          console.info(err);
+        }
+        res.status(209).send("yes");
       }
-      res.json(result.rows);
-      //console.log(result.rows);
-    });
+    );
   } catch (err) {
     console.log(err);
   }
