@@ -13,6 +13,14 @@ const Section6 = () => {
       <Container>
         <Row className="d-flex justify-content-center align-items-center text-center s6">
           <Col md={6} className="d-flex justify-content-center align-items-center text-center">
+            <div className="jumbotron-video-wrapper"></div>
+            {/* <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/574425747?h=e180e54244"
+              width="640"
+              height="360"
+              frameborder="0"
+              allowfullscreen></iframe> */}
             <div>
               <p className="t12">
                 Episode 01: <b>the great migration</b>
@@ -23,7 +31,13 @@ const Section6 = () => {
                 <br /> sed diam nonumy eirmod tempor invidunt ut labore et.
               </p>
               <Button className="btn4 m-4 ">
-                <BsFillPlayFill className="me-2" /> Watch film
+                <BsFillPlayFill
+                  className="me-2"
+                  onClick={() => {
+                    this.refs.video.play();
+                  }}
+                />{" "}
+                Watch film
               </Button>
             </div>
           </Col>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
-import eight from "../images/8.png";
+import { Nav, NavLink, Col, Row, Navbar, Container, Carousel, Button } from "react-bootstrap";
+import one from "../images/8.png";
+import two from "../images/19.png";
+import three from "../images/20.png";
 
 const Section4 = () => {
   return (
@@ -21,7 +23,17 @@ const Section4 = () => {
         </Col>
         <Col md={6} className="d-flex justify-content-center align-items-end text-center sc4-right">
           <div>
-            <img src={eight} />
+            <Carousel variant="dark">
+              <Carousel.Item interval={800}>
+                <img src={one} alt="First slide" />
+              </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img src={two} width="440" height="440" alt="Second slide" />
+              </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img src={three} width="440" height="440" alt="Third slide" />
+              </Carousel.Item>
+            </Carousel>
             <p className="t8 ">Press. sip. enjoy.</p>
           </div>
         </Col>

@@ -353,3 +353,7 @@ a {
 td {
   vertical-align: middle !important;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon, .carousel-indicators {
+  visibility: hidden !important;
+}
