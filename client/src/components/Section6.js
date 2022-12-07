@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
 import { BsFillPlayFill } from "react-icons/bs";
+import { MdOutlineClose } from "react-icons/md";
 
 const Section6 = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -14,18 +15,30 @@ const Section6 = () => {
       </Row>
       <Container>
         <Row className="d-flex justify-content-center align-items-center text-center s6">
+          <div className={isClicked ? "model open" : "model"}>
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/574425747?h=e180e54244"
+              width="1000"
+              height="1000"
+              frameborder="0"
+              style={{ zIndex: "2" }}
+              allowfullscreen></iframe>
+            <MdOutlineClose onClick={() => setIsClicked(false)} />
+          </div>
           <Col md={6} className="d-flex justify-content-center align-items-center text-center">
-            {isClicked ? (
+            {/* {isClicked ? (
               <iframe
                 title="vimeo-player"
                 src="https://player.vimeo.com/video/574425747?h=e180e54244"
                 width="1000"
                 height="1000"
                 frameborder="0"
+                style={{zIndex:"2"}}
                 allowfullscreen></iframe>
             ) : (
               <></>
-            )}
+            )} */}
             <div>
               <p className="t12">
                 Episode 01: <b>the great migration</b>
