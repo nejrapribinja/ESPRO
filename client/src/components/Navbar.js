@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
+import { Nav, NavLink, Col, Row, Navbar, Container } from "react-bootstrap";
 import { BsBag } from "react-icons/bs";
 import { BiUser, BiSearch } from "react-icons/bi";
-import { AiOutlineArrowDown } from "react-icons/ai";
 import logo from "../images/ESPRO Logo.png";
-import Login from "./Login";
 
 const Navigation = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -30,13 +28,12 @@ const Navigation = () => {
               <Nav.Link href="#kontakt">Brew guides</Nav.Link>
               <Nav.Link href="/login">Blog</Nav.Link>
               <BiSearch className="icon" />
-              <BiUser className="icon" onClick={() => setModalShow(true)} />
+              <BiUser className="icon" />
               <BsBag className="icon" />
             </Nav>
           </Col>
         </Navbar.Collapse>
       </Container>
-      <Login show={modalShow} onHide={() => setModalShow(false)} />
     </Navbar>
   );
 };

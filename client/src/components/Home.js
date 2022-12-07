@@ -9,14 +9,12 @@ import Section5 from "./Section5";
 import Section6 from "./Section6";
 import Section7 from "./Section7";
 import Section8 from "./Section8";
-import PostSection from "./PostSection";
 
 const Home = () => {
   return (
     <>
       <Main />
       <Section1 />
-      <PostSection />
       <Section2 />
       <Section3 />
       <Section4 />

@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
 import ten from "../images/10.png";
+import one from "../images/Group 6.png";
 
 const Section7 = () => {
   return (
-    <Container fluid style={{ paddingTop: "4rem", paddingBottom: "4rem" }} className="section7">
+    <Container
+      fluid
+      style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
+      className="section7"
+      id="content">
+      <img src={one} id="c" />
       <Container>
         <Row className="d-flex justify-content-center align-items-center text-center">
           <Col md={6} className="d-flex justify-content-start align-items-center text-start">
