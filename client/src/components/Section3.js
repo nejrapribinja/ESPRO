@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
-import Product from "./Product";
+import { Col, Row, Container, Button } from "react-bootstrap";
 
 const Section3 = () => {
   return (

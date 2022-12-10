@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import ten from "../images/10.png";
 import one from "../images/Group 6.png";
 

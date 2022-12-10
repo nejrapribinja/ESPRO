@@ -413,7 +413,7 @@
     position: absolute;
     top: 0px;
     right: 30px;
-    animation: rotation 2s infinite linear;
+    animation: rotation 5s infinite linear;
   }
   
   @keyframes rotation {

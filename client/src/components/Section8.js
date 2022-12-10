@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import { GiCoffeeCup } from "react-icons/gi";
 import { BsInstagram } from "react-icons/bs";
 import one from "../images/14.png";

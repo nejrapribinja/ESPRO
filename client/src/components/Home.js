@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import Main from "./Main";
 import Section1 from "./Section1";

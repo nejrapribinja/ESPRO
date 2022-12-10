@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import { BsFillPlayFill } from "react-icons/bs";
 import { MdOutlineClose } from "react-icons/md";
 

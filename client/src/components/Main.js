@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Navigation from "./Navbar";
 
 const Main = () => {
-  const [modalShow, setModalShow] = useState(false);
-
   return (
     <Container fluid>
       <Row className="d-flex justify-content-center align-items-center text-center">

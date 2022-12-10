@@ -1,7 +1,6 @@
-import { Row, Col, Container, InputGroup, FormControl, Form, Button } from "react-bootstrap";
+import { Row, Col, Container, InputGroup, Form, Button } from "react-bootstrap";
 import whiteLogo from "../images/white espro logo.png";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
-import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
   return (

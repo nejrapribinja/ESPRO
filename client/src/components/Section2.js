@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Col, Row, Navbar, Container, Table, Button } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import five from "../images/5.png";
 
 const Section2 = () => {
