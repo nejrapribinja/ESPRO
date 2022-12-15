@@ -11,10 +11,16 @@ const Section1 = () => {
         </Col>
       </Row>
       <Row className="d-flex justify-content-center align-items-center text-center">
-        <Col md={12} className="d-flex justify-content-center align-items-center text-center">
+        <Col className="d-flex justify-content-center align-items-center text-center">
           <Product />
+        </Col>
+        <Col className="d-flex justify-content-center align-items-center text-center">
           <Product />
+        </Col>
+        <Col className="d-flex justify-content-center align-items-center text-center">
           <Product />
+        </Col>
+        <Col className="d-flex justify-content-center align-items-center text-center">
           <Product />
         </Col>
       </Row>

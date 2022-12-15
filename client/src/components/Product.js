@@ -6,7 +6,7 @@ const Product = () => {
   return (
     <Card style={{ width: "18rem", margin: "1rem" }}>
       <Card.Img variant="top" src={five} />
-      <Card.Body>
+      <Card.Body className="text-start">
         <AiFillStar />
         <AiFillStar />
         <Card.Title>Card Title</Card.Title>
